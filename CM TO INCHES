@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: yellow
+        }
+        .hello{
+            margin-top: 10%;
+            height : 400px;
+            width: 300px;
+            color: white;
+            background-color: darkslategray;
+        }
+    </style>
+</head>
+<body><center>
+      <div class="hello">
+        <br>
+             <h2> cm to inches</h2>
+         <input type="text" id="num">
+         <br>
+         <br>
+         <button onclick="convert()"> Convert the inches </button>
+         <p id="anwser"></p>
+      </div>
+</center>
+    <script>
+         function convert(){
+        let cal = Number(document.getElementById("num").value)
+        let inches = cal/2.54
+       
+        let result = document.getElementById("anwser")
+        result.innerHTML = inches.toFixed(2)
+        }
+        convert()
+    </script>
+</body>
+</html>
